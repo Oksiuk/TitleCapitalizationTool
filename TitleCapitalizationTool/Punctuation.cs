@@ -7,14 +7,7 @@
 
         public Punctuation()
         {
-            punctuations = new string[size];
-            punctuations[0] = ",";
-            punctuations[1] = ";";
-            punctuations[2] = ":";
-            punctuations[3] = ".";
-            punctuations[4] = "!";
-            punctuations[5] = "?";
-            punctuations[6] = "-";
+            punctuations = new string[] { ",", ";", ":", ".", "!", "?", "-" };
         }
 
         public bool IsPunctuation(string @string)

@@ -7,16 +7,7 @@
 
         public Preposition()
         {
-            prepositions = new string[size];
-            prepositions[0] = "at";
-            prepositions[1] = "by";
-            prepositions[2] = "in";
-            prepositions[3] = "of";
-            prepositions[4] = "on";
-            prepositions[5] = "or";
-            prepositions[6] = "out";
-            prepositions[7] = "to";
-            prepositions[8] = "up";
+            prepositions = new string[] { "at", "by", "in", "of", "on", "or", "out", "to", "up" };
         }
 
         public bool IsPreposition(string @string)

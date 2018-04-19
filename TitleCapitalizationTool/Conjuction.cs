@@ -7,13 +7,7 @@
 
         public Conjuction()
         {
-            conjuctions = new string[size];
-            conjuctions[0] = "and";
-            conjuctions[1] = "but";
-            conjuctions[2] = "for";
-            conjuctions[3] = "nor";
-            conjuctions[4] = "so";
-            conjuctions[5] = "yet";
+            conjuctions = new string[] { "and", "but", "for", "nor", "so", "yet" };
         }
 
         public bool IsConjuction(string @string)

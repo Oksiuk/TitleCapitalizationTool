@@ -7,10 +7,7 @@
 
         public Article()
         {
-            articles = new string[size];
-            articles[0] = "a";
-            articles[1] = "an";
-            articles[2] = "the";
+            articles = new string[] { "a", "an", "the" };
         }
 
         public bool IsArticle(string @string)
