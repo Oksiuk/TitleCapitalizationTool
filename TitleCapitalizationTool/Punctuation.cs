@@ -4,6 +4,7 @@
     {
         private string[] punctuations;
         private int size = 7;
+
         public Punctuation()
         {
             punctuations = new string[size];
@@ -15,6 +16,7 @@
             punctuations[5] = "?";
             punctuations[6] = "-";
         }
+
         public bool IsPunctuation(string @string)
         {
             for (int i = 0; i < size; ++i)
@@ -26,6 +28,7 @@
             }
             return false;
         }
+
         public bool IsSpace(string @string)
         {
             if (@string == punctuations[6])

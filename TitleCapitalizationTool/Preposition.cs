@@ -4,6 +4,7 @@
     {
         private string[] prepositions;
         private int size = 9;
+
         public Preposition()
         {
             prepositions = new string[size];
@@ -17,6 +18,7 @@
             prepositions[7] = "to";
             prepositions[8] = "up";
         }
+
         public bool IsPreposition(string @string)
         {
             for (int i = 0; i < size; ++i)

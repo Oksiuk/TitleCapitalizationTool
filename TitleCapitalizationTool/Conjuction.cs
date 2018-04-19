@@ -4,6 +4,7 @@
     {
         private string[] conjuctions;
         private int size = 6;
+
         public Conjuction()
         {
             conjuctions = new string[size];
@@ -14,6 +15,7 @@
             conjuctions[4] = "so";
             conjuctions[5] = "yet";
         }
+
         public bool IsConjuction(string @string)
         {
             for (int i = 0; i < size; ++i)
