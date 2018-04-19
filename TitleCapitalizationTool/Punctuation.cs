@@ -1,6 +1,6 @@
 ﻿namespace TitleCapitalizationTool
 {
-    class Punctuation
+    internal class Punctuation
     {
         private string[] punctuations;
         private int size = 7;
