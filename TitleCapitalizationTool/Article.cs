@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TitleCapitalizationTool
+﻿namespace TitleCapitalizationTool
 {
     internal class Article
     {
         private string[] articles;
         private int size = 3;
+
         public Article()
         {
             articles = new string[size];
@@ -17,6 +12,7 @@ namespace TitleCapitalizationTool
             articles[1] = "an";
             articles[2] = "the";
         }
+
         public bool IsArticle(string @string)
         {
             for (int i = 0; i < articles.Length; ++i)
@@ -26,7 +22,7 @@ namespace TitleCapitalizationTool
                     return true;
                 }
             }
-            return false; ;
+            return false; 
         }
     }
 }

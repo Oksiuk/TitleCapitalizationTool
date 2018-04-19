@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace TitleCapitalizationTool
 {
     class Program
     {
-        static void Main()
+        public static void Main()
         {
             Console.WriteLine("Enter a name of smth:");
             string inputString = Console.ReadLine();
@@ -25,8 +22,8 @@ namespace TitleCapitalizationTool
 
             for (int i = 0; i < words.Length; ++i)
             {
-                if (articles.IsArticle(words[i]) == false && conjuctions.IsConjuction(words[i]) == false
-                    && prepositions.IsPreposition(words[i]) == false && punctuations.IsPunctuation(words[i]) == false)
+                if (!articles.IsArticle(words[i]) && !conjuctions.IsConjuction(words[i])
+                    && !prepositions.IsPreposition(words[i]) && !punctuations.IsPunctuation(words[i]))
                 {
                     wordBuilder.Clear();
                     char[] symbol = words[i].ToCharArray();
@@ -45,7 +42,7 @@ namespace TitleCapitalizationTool
                     }
                     resultBuilder.Append(wordBuilder);
                 }
-                else if (articles.IsArticle(words[i]) == true || conjuctions.IsConjuction(words[i]) == true || prepositions.IsPreposition(words[i]) == true)
+                else if (articles.IsArticle(words[i]) || conjuctions.IsConjuction(words[i]) || prepositions.IsPreposition(words[i]))
                 {
                     wordBuilder.Clear();
                     char[] symbol = words[i].ToCharArray();
@@ -64,15 +61,15 @@ namespace TitleCapitalizationTool
                     }
                     resultBuilder.Append(wordBuilder);
                 }
-                else if (punctuations.IsPunctuation(words[i]) == true)
+                else if (punctuations.IsPunctuation(words[i]))
                 {
-                    if (punctuations.IsSpace(words[i]) == true)
+                    if (punctuations.IsSpace(words[i]) )
                     {
                         resultBuilder.Append(" ");
                     }
                     resultBuilder.Append(words[i]);
                 }
-                if (i != words.Length - 1 && punctuations.IsPunctuation(words[i + 1]) == false)
+                if (i != words.Length - 1 && !punctuations.IsPunctuation(words[i + 1]))
                 {
                     resultBuilder.Append(" ");
                 }
@@ -81,5 +78,3 @@ namespace TitleCapitalizationTool
         }
     }
 }
-    
-
