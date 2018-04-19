@@ -21,14 +21,15 @@
 
         public bool IsPreposition(string @string)
         {
+            bool isPreposition = false;
             for (int i = 0; i < size; ++i)
             {
                 if (prepositions[i] == @string)
                 {
-                    return true;
+                    isPreposition = true;
                 }
             }
-            return false;
+            return isPreposition;
         }
     }
 }

@@ -19,23 +19,25 @@
 
         public bool IsPunctuation(string @string)
         {
+            bool isPunctuation = false;
             for (int i = 0; i < size; ++i)
             {
                 if (punctuations[i] == @string)
                 {
-                    return true;
+                    isPunctuation = true;
                 }
             }
-            return false;
+            return isPunctuation;
         }
 
         public bool IsSpace(string @string)
         {
+            bool isSpace = false;
             if (@string == punctuations[6])
             {
-                return true;
+                isSpace = true;
             }
-            return false;
+            return isSpace;
         }
     }
 }

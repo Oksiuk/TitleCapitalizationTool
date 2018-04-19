@@ -18,14 +18,15 @@
 
         public bool IsConjuction(string @string)
         {
+            bool isConjuction = false;
             for (int i = 0; i < size; ++i)
             {
                 if (conjuctions[i] == @string)
                 {
-                    return true;
+                    isConjuction = true;
                 }
             }
-            return false;
+            return isConjuction;
         }
     }
 }

@@ -15,14 +15,15 @@
 
         public bool IsArticle(string @string)
         {
+            bool isArticle = false;
             for (int i = 0; i < articles.Length; ++i)
             {
                 if (articles[i] == @string)
                 {
-                    return true;
+                    isArticle=true; 
                 }
             }
-            return false; 
+            return isArticle; 
         }
     }
 }
